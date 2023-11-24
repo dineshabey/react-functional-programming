@@ -33,6 +33,59 @@ console.log(result);
 const addArrow = a => b => a + b;
 console.log(addArrow(10)(20));
 
+/* Higher Order Functins 
+
+01.Take one argument as a function
+
+function myFunction(function(){}){
+  
+}
+function myFunction(function(){},string,number,boolean){
+
+}
+
+02.
+
+function myFunction((){},function(){},function(){},function(){}){
+
+}
+function myFunction((){},function(){},function(){},function(){},string,number,boolean){
+
+}
+
+03.Return a function
+
+function myFunction(){
+  return const myFunction = () =>{}
+}
+function myFunction(string,number,boolean){
+  return const myFunction = () =>{}
+}
+
+function myFunction((){},function(){},function(){},function(){}){
+  return const myFunction = () =>{}
+}
+function myFunction((){},function(){},function(){},function(){},string,number){
+  return const myFunction = () =>{}
+}
+
+
+*/
+
+const resultA = [45, 78, 45, 65, 12, 8, 9];
+const resultVal = resultA.map(printResult);
+
+function printResult(val) {
+  return `result ${val}`;
+}
+
+
+console.log(resultVal);
+
+
+
+
+
 function App() {
   return (
     <div className="App">
