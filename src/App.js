@@ -21,21 +21,18 @@ function addNumbers(a, b) {
 // myFunction()();
 
 function add(a) {
-  return function () {
-    return (a + 10);
+  return function (b) {
+    return (a + b);
   }
 }
 
-const result = add(5)();
+const result = add(5)(100);
 console.log(result);
 
 
 function App() {
   return (
     <div className="App">
-
-
-
     </div>
   );
 }
