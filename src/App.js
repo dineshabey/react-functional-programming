@@ -30,6 +30,9 @@ const result = add(5)(100);
 console.log(result);
 
 
+const addArrow = a => b => a + b;
+console.log(addArrow(10)(20));
+
 function App() {
   return (
     <div className="App">
