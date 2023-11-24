@@ -20,18 +20,18 @@ function addNumbers(a, b) {
 
 // myFunction()();
 
-function add(a) {
-  return function (b) {
-    return (a + b);
-  }
-}
+// function add(a) {
+//   return function (b) {
+//     return (a + b);
+//   }
+// }
 
-const result = add(5)(100);
-console.log(result);
+// const result = add(5)(100);
+// console.log(result);
 
 
-const addArrow = a => b => a + b;
-console.log(addArrow(10)(20));
+// const addArrow = a => b => a + b;
+// console.log(addArrow(10)(20));
 
 /* Higher Order Functins 
 
@@ -73,17 +73,34 @@ function myFunction((){},function(){},function(){},function(){},string,number){
 */
 
 const resultA = [45, 78, 45, 65, 12, 8, 9];
-const resultVal = resultA.map(printResult);
+// const resultVal = resultA.map(printResult);
 
 function printResult(val) {
   return `result ${val}`;
 }
 
 
-console.log(resultVal);
+// console.log(resultVal);
+
+/*
+Pure and non-pure function
+*/
 
 
+function getSqure(value) {
+  return value * value;
+}
 
+
+//Not pure function
+function getSqure2(value) {
+  return value + Math.random();
+}
+
+console.log(getSqure(10));
+console.log(getSqure2(20));
+console.log(getSqure(10));
+console.log(getSqure2(20));
 
 
 function App() {
