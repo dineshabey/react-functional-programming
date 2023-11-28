@@ -112,12 +112,27 @@ console.log(viwObj(students));
 console.log(viwObj(students));
 
 //This is not pure function change student array
+// function addSkills(students, skills) {
+//   students.skills.push(skills);
+//   return students;
+// }
+
+//This is pure function  - immutability / original object not change
 function addSkills(students, skills) {
-  students.skills.push(skills);
-  return students;
+  const newStudent = { ...students };
+  const newSkills = [...students.skills];
+
+  newSkills.push(skills);
+
+  newStudent.skills = newSkills;
+  return newStudent;
 }
 
 console.log(addSkills(students, 'redux'));
+console.log(addSkills(students, 'redux'));
+console.log(addSkills(students, 'redux'));
+console.log(addSkills(students, 'redux'));
+
 
 
 
