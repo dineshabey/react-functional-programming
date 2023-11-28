@@ -97,10 +97,28 @@ function getSqure2(value) {
   return value + Math.random();
 }
 
-console.log(getSqure(10));
-console.log(getSqure2(20));
-console.log(getSqure(10));
-console.log(getSqure2(20));
+// console.log(getSqure(10));
+// console.log(getSqure2(20));
+// console.log(getSqure(10));
+// console.log(getSqure2(20));
+
+const students = { 'name': 'John', skills: ['react', 'PHP'] }
+
+function viwObj(obj) {
+  return obj;
+}
+
+console.log(viwObj(students));
+console.log(viwObj(students));
+
+//This is not pure function change student array
+function addSkills(students, skills) {
+  students.skills.push(skills);
+  return students;
+}
+
+console.log(addSkills(students, 'redux'));
+
 
 
 function App() {
